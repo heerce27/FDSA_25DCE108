@@ -10,7 +10,7 @@ int main() {
         cin >> arr[i];
     }
     int count0 = 0, count1 = 0, count2 = 0;
-    // First pass: Count elements
+   
     for (int i = 0; i < n; i++) {
         if (arr[i] == 0)
             count0++;
@@ -19,7 +19,7 @@ int main() {
         else
             count2++;
     }
-    // Second pass: Rewrite array
+    
     int index = 0;
     while (count0--)
         arr[index++] = 0;
