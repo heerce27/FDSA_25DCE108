@@ -50,7 +50,7 @@ int main()
 
     int r=recursiveSearch(arr,0,n-1,f);
     if(r!=0)
-    cout<<"Code found at "<<r+1<<" position";
+    cout<<"\nCode found at "<<r+1<<" position";
     else
     cout<<"Code not found";  
 }
