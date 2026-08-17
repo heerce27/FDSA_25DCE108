@@ -1,0 +1,18 @@
+Problem 1 – Linear Search
+
+Challenges Faced:
+The main challenge was understanding recursion and how the function moves to the next index.
+I also had to handle duplicate values.
+
+Solution Applied:
+I passed the current index to the recursive function and called it for the next index until
+the target was found or the array ended. If duplicates exist, it returns the first occurrence.
+
+Problem 2 – Binary Search
+
+Challenges Faced:
+The main challenge was implementing recursion with the correct stopping condition.
+
+Solution Applied:
+I used both loop and recursion to find the middle element and search the required half. 
+The array must be sorted for binary search to work correctly.

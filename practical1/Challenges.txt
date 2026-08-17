@@ -1,0 +1,33 @@
+Problem 1 – Array Rotation
+
+Challenges Faced:
+The main challenge was understanding how to repeatedly move the first element to the end.
+A large value of h could also make the program slow.
+
+Solution Applied:
+I used rotation to move the first element to the end. To handle large h, I used h % n, 
+because after n rotations the array becomes the same again. This avoids performing 
+millions of unnecessary rotations.
+
+Problem 2 – Finding Duplicate Book IDs
+
+Challenges Faced:
+The main challenge was finding duplicate IDs without printing the same ID multiple times. 
+Checking every element against every other element would also be inefficient for large 
+data.
+
+Solution Applied:
+I kept track of the IDs that had already appeared. When an ID appeared again, I identified
+it as a duplicate. Using a frequency-counting approach, the data can be processed in one pass, 
+making it practical even for 100,000 records.
+
+Problem 3 – Longest Word
+
+Challenges Faced:
+The main challenge was separating the sentence into individual words and comparing their 
+lengths. I also had to handle the last word because there may be no space after it.
+
+Solution Applied:
+I used getline() to take the complete sentence and built each word character by character.
+Whenever a space or the end of the sentence was reached, I compared the current word with
+maxw and updated it if it was longer. 

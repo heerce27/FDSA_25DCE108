@@ -1,0 +1,8 @@
+Problem 1- Sorting- Insertion,Bubble,Selection
+
+Challenges Faced:
+Initially i found Insertion sort difficult to understand, that how the key will be taken 
+and how j's value is changing.
+
+Solution Applied:
+I ran a dry run for it and understood the changing values of key and j.
