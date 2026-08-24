@@ -64,23 +64,28 @@ void insert_atpos(Node** head,int val,int pos)
     temp->next = newn;
 }
 
-void deletion_by_value(Node** head,int val){
-    if(*head==NULL){
-        cout<<"List is empty";
+void deletion_by_value(Node** head, int val)
+{
+    if(*head == NULL)
+    {
+        cout << "List is empty\n";
         return;
     }
 
-    Node *temp= *head;
-    Node *p = nullptr;
-    
-    while(temp->next!= NULL && temp->data!=val){
-        p=temp;
-        temp=temp->next;
+    Node* temp = *head;
+    Node* p = NULL;
+    while(temp != NULL && temp->data != val)
+    {
+        p = temp;
+        temp = temp->next;
     }
-    if(temp==NULL){
-        cout<<"Value not found";
+
+    if(temp == NULL)
+    {
+        cout << "Value not found\n";
         return;
     }
+
     if(p == NULL)
     {
         *head = temp->next;
@@ -114,6 +119,7 @@ int main()
         cout << "\n5. Forward display";
         cout << "\n6. Reverse display";
         cout << "\n7. Exit";
+        cout<<"\nEnter choice:";
         cin>>choice;
         switch(choice)
         {
@@ -129,6 +135,7 @@ int main()
                         cin>>id;
                         insert_at_beginning(&head,id);
                     }
+                     print_list(head);
                     break;
                 }
             case 2:
@@ -143,6 +150,7 @@ int main()
                         cin>>id;
                         insert_at_end(&head,id);
                     }
+                    print_list(head);
                     break;
                 }
             case 3:
@@ -160,6 +168,7 @@ int main()
                         cin>>pos;
                         insert_atpos(&head,id,pos);
                     }
+                     print_list(head);
                     break;
                 }
             case 4:

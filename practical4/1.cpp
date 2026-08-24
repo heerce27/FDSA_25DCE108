@@ -38,28 +38,43 @@ void insert_at_end(Node** head,int val)
     }
     current->next = newn;
 }
-void insert_atpos(Node** head,int val,int pos)
+void insert_atpos(Node** head, int val, int pos)
 {
-    if(pos==1)
+    if(pos <= 0)
     {
-        insert_at_beginning(head,val);
+        cout << "Invalid position\n";
         return;
     }
-    Node *newn=new Node();
-    newn->data=val;
-    if(*head==NULL){
-        *head=newn;
-         return;
-    }
-    Node *temp = *head;
-    for(int i=0;i<pos-1;i++)
+    if(pos == 1)
     {
+        insert_at_beginning(head, val);
+        return;
+    }
+    if(*head == NULL)
+    {
+        cout << "Invalid position\n";
+        return;
+    }
+    Node* temp = *head;
+    
+    for(int i = 1; i < pos - 1; i++)
+    {
+        if(temp == NULL)
+        {
+            cout << "Invalid position\n";
+            return;
+        }
         temp = temp->next;
     }
-    if (temp == NULL) 
-    { 
-        printf("Invalid position\n"); return; 
+
+    if(temp == NULL)
+    {
+        cout << "Invalid position\n";
+        return;
     }
+
+    Node* newn = new Node();
+    newn->data = val;
     newn->next = temp->next;
     temp->next = newn;
 }

@@ -3,7 +3,6 @@ using namespace std;
 
 struct Node
 {
-    /* data */
     int data;
     Node *next;
     Node *pre;
@@ -14,7 +13,6 @@ void insert_at_begining(Node **head, int val){
     newn->next=*head;
     newn->pre=NULL;
     if(*head!=NULL){
-       
         (*head)->pre=newn;
     }
     *head=newn;
@@ -38,6 +36,7 @@ void insert_at_end(Node **head,int val){
     temp->next=newn;
      newn->pre=temp;
 }
+
 void insert_at_pos(Node **head,int val,int pos){
     if (*head == NULL)
     {
@@ -51,10 +50,10 @@ void insert_at_pos(Node **head,int val,int pos){
         temp=temp->next;
     }
     if(temp == NULL)
-{
-    cout << "Position not found\n";
-    return;
-}
+    {
+        cout << "Position not found\n";
+        return;
+    }
     newn->next=temp->next;
     newn->pre=temp;
     if(temp->next!=NULL){

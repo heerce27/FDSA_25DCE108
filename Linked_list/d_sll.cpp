@@ -6,8 +6,8 @@ struct Node
     Node* next;
 };
 
-void delete_at_begining(Node* head){
-    int *temp=head;
+void delete_at_begining(Node** head){
+    Node *temp=*head;
     head=head->next;
     free(temp);
 }
