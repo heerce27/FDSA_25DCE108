@@ -37,29 +37,24 @@ void insert_at_end(Node **head,int val){
      newn->pre=temp;
 }
 
-void insert_at_pos(Node **head,int val,int pos){
-    if (*head == NULL)
-    {
-        cout << "List is empty\n";
-        return;
-    }
-    Node *temp= *head;
-    Node *newn=new Node();
-    newn->data=val;
-    for(int i=1;i<pos && temp!=NULL; i++){
+void insert_at_pos(Node **head,int song,int val){
+    Node *temp=*head;
+    while(temp!=NULL && temp->data!=song){
         temp=temp->next;
-    }
-    if(temp == NULL)
-    {
-        cout << "Position not found\n";
+    } 
+    if(temp==NULL){
+        cout<<"Song not found\n";
         return;
-    }
+    }          
+    Node* newn=new Node();
+    newn->data=val;
     newn->next=temp->next;
     newn->pre=temp;
-    if(temp->next!=NULL){
-        temp->next->pre=newn;
+    if (temp->next != NULL)
+    {
+        temp->next->pre = newn;
     }
-    temp->next=newn;
+    temp->next = newn;                                                                                                    
 }
 
 void display(Node *head){
@@ -74,7 +69,7 @@ void display(Node *head){
         c++;
         temp=temp->next;
     }
-    cout<<"\nSong count : "<<c;
+    cout<<"\nSong count : "<<c<<endl;
 }
 
 void delete_first(Node **head){
@@ -104,7 +99,7 @@ int main()
     insert_at_end(&head, 30);
     display(head);
 
-    insert_at_pos(&head, 25, 2);
+    insert_at_pos(&head, 20, 2);
     display(head);
 
     delete_first(&head);
@@ -112,5 +107,3 @@ int main()
 
     return 0;
 }
-
-
