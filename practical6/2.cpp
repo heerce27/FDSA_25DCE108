@@ -51,6 +51,7 @@ int main() {
     browser.visit("YouTube");
     browser.visit("GitHub");
     browser.visit("Coursera");
+    cout<<"\nBack operations:\n";
     browser.back();
     browser.back();
     browser.back();
