@@ -46,5 +46,5 @@ int main(){
     root->insert(root,10);
     root->insert(root,3);
     cout<<"Inorder Traversal: ";
-    root->inorder();
+    root->inorder(); 
 }
